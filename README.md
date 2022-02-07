@@ -1,6 +1,6 @@
 # Numeral Systems
 
-1. Write a program that validates if a string is a correct representation of a number in base B (`B <= 36`).
+1. Write a program that validates if a string is a correct representation of a number in base B (`1 <= B <= 36`).
 
    Write the following function: `func isValidNumber(num string, base int) bool` and tests for it.
    
