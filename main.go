@@ -20,16 +20,18 @@ func isValidNumber(num string, base int) bool {
 		return false
 	}
 	switch base > 0 {
-	case (base <= 10):
+	case base <= 10:
 		for i := range num {
-			if num[i] > byte(base+48) {
+			fmt.Println(num[i])
+			fmt.Println(byte(base + 48))
+			if int(num[i]) >= base+48 {
 				return false
 			}
 		}
 
 	case base > 10:
 		for i := range num {
-			if num[i] > byte(base+54) {
+			if num[i] >= byte(base+65) {
 				return false
 			}
 
