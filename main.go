@@ -22,8 +22,6 @@ func isValidNumber(num string, base int) bool {
 	switch base > 0 {
 	case base <= 10:
 		for i := range num {
-			fmt.Println(num[i])
-			fmt.Println(byte(base + 48))
 			if int(num[i]) >= base+48 {
 				return false
 			}
