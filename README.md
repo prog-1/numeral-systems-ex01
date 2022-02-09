@@ -4,6 +4,13 @@
 
    Write the following function: `func isValidNumber(num string, base int) bool` and tests for it.
    
+   Test examples:
+ 
+   ```go
+   {num: "123", base: 10, want: true},
+   {num: "123", base: 3, want: false},
+   ```
+   
 2. Convert the following numbers to base-10:
 
    1. 111101<sub>2</sub>
