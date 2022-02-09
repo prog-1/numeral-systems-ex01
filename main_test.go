@@ -9,6 +9,8 @@ func TestIsValidNumber(t *testing.T) {
 		base          int
 		isValidNumber bool
 	}{
+		{"Empty", "", 1, true},
+		// If number is an empty string, then the number does not exist(it is emptiness), and the emptiness belongs to any base
 		{"Binary number", "010111001", 2, true},
 		{"Non-binary number", "1102001", 2, false},
 		{"Ternary number", "0110201", 3, true},
