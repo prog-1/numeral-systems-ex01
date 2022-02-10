@@ -9,7 +9,7 @@ const base36 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ" //haha
 
 func isValidNumber(num string, base int) bool {
 	for _, r := range num {
-		if byte(r) > base36[base] || base == 0 || base == 1 { // i found only theories about base 0 or 1, but noone use them in any practical case, so i think false here will be better
+		if byte(r) > base36[base] || base == 0 { // i found only theories about base 0 or 1, but noone use them in any practical case, so i think false here will be better
 			return false
 		}
 	}

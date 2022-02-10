@@ -13,7 +13,11 @@ func TestIsValidNumber(t *testing.T) {
 		{num: "123", base: 1, want: false},
 		{num: "123AB", base: 16, want: true},
 		{num: "123ZZZ", base: 3, want: false},
-		{num: "000", base: 0, want: false}, // i found only theories about base 0 or 1, but noone use them in any practical case, so i think false here will be better
+		{num: "123456789", base: 10, want: true},
+		{num: "123AB", base: 10, want: false},
+		{num: "", base: 10, want: true},
+		{num: "000", base: 0, want: false},
+		{num: "000", base: 1, want: true}, // i found only theories about base 0 or 1, but noone use them in any practical case, so i think false here will be better
 	} {
 		if got := isValidNumber(tc.num, tc.base); got != tc.want {
 			t.Errorf("isValidNumber(%v, %v) = (%v), want = (%v)", tc.num, tc.base, got, tc.want)
