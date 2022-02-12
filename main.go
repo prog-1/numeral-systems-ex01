@@ -8,6 +8,9 @@ import (
 const base36 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func isValidNumber(num string, base int) bool {
+	if num == ""{
+		return false	
+	}
 	for _, v := range num {
 		if !strings.Contains(base36[:base], string(v)) {
 			return false
