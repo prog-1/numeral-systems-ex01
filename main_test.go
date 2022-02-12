@@ -11,6 +11,8 @@ func TestIsValidNumber(t *testing.T) {
 		want bool
 	}{
 		{"", 0, false},
+		{"", 1, false},
+		{"", 16, false},
 		{"1", 0, false},
 		{"123", 0, false},
 		{"0123459", -1, false},

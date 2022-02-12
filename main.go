@@ -7,7 +7,7 @@ import (
 
 func isValidNumber(num string, base int) bool {
 	base36 := "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	if 1 <= base && base <= 36 {
+	if 1 <= base && base <= 36 && len(num) > 0 {
 		for _, v := range num {
 			if !strings.Contains(base36[:base], string(v)) {
 				return false
