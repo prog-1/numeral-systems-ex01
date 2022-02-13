@@ -1,3 +1,3 @@
-module go
+module numeralsystems
 
 go 1.17
