@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-const base36 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ" //haha
+const base36 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func isValidNumber(num string, base int) bool {
 	for _, r := range num {
@@ -35,4 +35,9 @@ func emtyMain() {
 
 func main() {
 	emtyMain()
+	fmt.Println(`
+	111101(2) -> 1 * 2^0 + 0 * 2^1 + 1 * 2^2 + 1 * 2^3 + 1 * 2^4 + 1 * 2^5 = 61(10)
+	331(4) -> 1 * 4^0 + 3 * 4^1 + 3 *4^2 = 61(10)
+	ABCD(16) -> 13 *16^0 + 12 * 16^1 + 11 * 16^2 + 10 * 16^3 = 43981(10)
+	ABCD(20) -> 13 * 20^0 + 12 * 20^1 + 11 *20^2 + 10 20^3 = 84653 (10) `)
 }
